@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>El Arte de la Contaduría — Fundamentos de Administración</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS — Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== FONDO CINEMATOGRÁFICO (fixed, detrás de todo) ===== -->
+  <div id="scene-bg" aria-hidden="true">
+    <!-- Las capas se generan dinámicamente por JS -->
+  </div>
+  <div id="scene-overlay" aria-hidden="true"></div>
+
+  <!-- Indicador de era activa -->
+  <div id="era-indicator" class="era-indicator" aria-live="polite"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <span class="nav-logo">📊 Contaduría</span>
+      <ul class="nav-links">
+        <li><a href="#portada"      class="nav-link">Inicio</a></li>
+        <li><a href="#ensayo"       class="nav-link">Ensayo</a></li>
+        <li><a href="#mapa"         class="nav-link">Mapa Conceptual</a></li>
+        <li><a href="#linea-tiempo" class="nav-link">Línea del Tiempo</a></li>
+        <li><a href="#analisis"     class="nav-link">Análisis</a></li>
+        <li><a href="#bibliografia" class="nav-link">Bibliografía</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ===== PORTADA / HERO ===== -->
+  <section id="portada">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <p class="hero-curso">Fundamentos de Administración · Contaduría Pública</p>
+      <h1 class="hero-titulo">El Arte de la Contaduría<br><em>en el Manejo de Recursos Económicos</em></h1>
+      <p class="hero-subtitulo">Una mirada histórica, conceptual y crítica sobre la disciplina contable</p>
+
+      <div class="hero-autoras">
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Heidy Andrea Morales Muñoz</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Karen Dayana Pérez Bernal</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Karen Dayana Vanegas Gutiérrez</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Nicolás Esteban Salamanca Rivas</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span>🏛️ Institución Universitaria de Colombia</span>
+        <span>📅 20 de mayo de 2026</span>
+      </div>
+
+      <a href="#ensayo" class="hero-btn">Explorar presentación ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== ENSAYO Y JUSTIFICACIÓN ===== -->
+  <section id="ensayo" class="section-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Ensayo y Justificación Temática</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        La contaduría pública es pilar fundamental en las organizaciones modernas: suministra información
+        financiera y económica esencial para la toma de decisiones estratégicas.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-icon">🎨</div>
+          <h3>La Contaduría como Arte</h3>
+          <p>El contador no solo registra números, los <strong>interpreta</strong>. Al igual que un artista transforma materiales en obras de valor, el contador transforma datos crudos en información estratégica que guía el rumbo de las organizaciones. Esta disciplina combina <em>rigor técnico, creatividad analítica y responsabilidad ética</em>.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-icon">💰</div>
+          <h3>Importancia de los Recursos Económicos</h3>
+          <p>Los recursos económicos son el motor de toda organización: financian salarios, materia prima e inversión. Sin un control adecuado, las empresas enfrentan <strong>deudas, embargos y cierre</strong>. La contaduría y la administración trabajan conjuntamente para garantizar la <em>estabilidad financiera</em> y el cumplimiento de objetivos institucionales.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="350">
+          <div class="card-icon">📋</div>
+          <h3>Planeación y Control Financiero</h3>
+          <p>La <strong>planeación financiera</strong> implica calcular ingresos, gastos y ganancias <em>antes de actuar</em>. El control de gastos exige vigilar cada movimiento, registrar compras y pagos con precisión. La conclusión es clara: la contaduría es <em>disciplina + creatividad + análisis + responsabilidad</em> = el arte de administrar recursos.</p>
+        </div>
+      </div>
+
+      <div class="justificacion" data-aos="fade-up" data-aos-delay="200">
+        <h3>📌 Justificación de la Temática</h3>
+        <p>Elegimos este tema porque la contaduría pública es el eje transversal de toda organización exitosa. Comprender su evolución histórica —desde los registros sumerios hasta la inteligencia artificial en auditoría— nos permite valorar la profundidad y vigencia de esta disciplina. Como futuras contadoras, reconocemos que administrar recursos económicos con precisión y visión estratégica no es solo una obligación profesional, sino un <strong>arte que transforma realidades</strong>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAPA CONCEPTUAL INTERACTIVO ===== -->
+  <section id="mapa" class="section-dark">
+    <div class="container">
+      <h2 class="section-title light" data-aos="fade-up">Mapa Conceptual Interactivo</h2>
+      <p class="section-subtitle light" data-aos="fade-up" data-aos-delay="100">
+        Pasa el cursor sobre cada nodo para explorar su descripción
+      </p>
+
+      <div class="mapa-wrapper" data-aos="zoom-in" data-aos-delay="200">
+        <svg id="mapa-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa conceptual de Contaduría y Administración">
+          <line class="mapa-linea" x1="400" y1="250" x2="400" y2="80"  stroke="#c9a84c" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="650" y2="160" stroke="#c9a84c" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="650" y2="360" stroke="#c9a84c" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="150" y2="360" stroke="#c9a84c" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="150" y2="160" stroke="#c9a84c" stroke-width="2" stroke-dasharray="6,3"/>
+
+          <g class="mapa-nodo" id="nodo-central" tabindex="0" data-tooltip="Núcleo de la disciplina: la contaduría y la administración trabajan juntas para garantizar la salud financiera y el logro de objetivos organizacionales.">
+            <ellipse cx="400" cy="250" rx="100" ry="50" fill="#1a2744" stroke="#c9a84c" stroke-width="3"/>
+            <text x="400" y="244" text-anchor="middle" fill="#c9a84c" font-size="13" font-weight="bold" font-family="Playfair Display">Contaduría &amp;</text>
+            <text x="400" y="262" text-anchor="middle" fill="#c9a84c" font-size="13" font-weight="bold" font-family="Playfair Display">Administración</text>
+          </g>
+          <g class="mapa-nodo" id="nodo-1" tabindex="0" data-tooltip="Planeación Financiera: calcular ingresos, gastos y ganancias antes de actuar. Permite anticipar escenarios y tomar decisiones informadas.">
+            <ellipse cx="400" cy="70" rx="90" ry="38" fill="#2d6a9f" stroke="#c9a84c" stroke-width="2"/>
+            <text x="400" y="64" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Planeación</text>
+            <text x="400" y="80" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Financiera</text>
+          </g>
+          <g class="mapa-nodo" id="nodo-2" tabindex="0" data-tooltip="Control de Gastos: vigilar cada movimiento económico, registrar compras y pagos. Evita el despilfarro y garantiza la sostenibilidad.">
+            <ellipse cx="660" cy="155" rx="90" ry="38" fill="#2d6a9f" stroke="#c9a84c" stroke-width="2"/>
+            <text x="660" y="149" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Control de</text>
+            <text x="660" y="165" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Gastos</text>
+          </g>
+          <g class="mapa-nodo" id="nodo-3" tabindex="0" data-tooltip="Toma de Decisiones: la información contable transforma datos en conocimiento estratégico para directivos y gerentes.">
+            <ellipse cx="660" cy="365" rx="90" ry="38" fill="#2d6a9f" stroke="#c9a84c" stroke-width="2"/>
+            <text x="660" y="359" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Toma de</text>
+            <text x="660" y="375" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Decisiones</text>
+          </g>
+          <g class="mapa-nodo" id="nodo-4" tabindex="0" data-tooltip="Estabilidad Organizacional: el control contable previene deudas, embargos y cierre. Garantiza la continuidad del negocio a largo plazo.">
+            <ellipse cx="140" cy="365" rx="90" ry="38" fill="#2d6a9f" stroke="#c9a84c" stroke-width="2"/>
+            <text x="140" y="359" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Estabilidad</text>
+            <text x="140" y="375" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Organizacional</text>
+          </g>
+          <g class="mapa-nodo" id="nodo-5" tabindex="0" data-tooltip="Recursos Económicos: salarios, materia prima, inversión. Son el motor de la organización y requieren gestión contable rigurosa.">
+            <ellipse cx="140" cy="155" rx="90" ry="38" fill="#2d6a9f" stroke="#c9a84c" stroke-width="2"/>
+            <text x="140" y="149" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Recursos</text>
+            <text x="140" y="165" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Económicos</text>
+          </g>
+        </svg>
+        <div id="mapa-tooltip" class="mapa-tooltip" role="tooltip" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LÍNEA DEL TIEMPO ===== -->
+  <!-- data-bg: imagen de Unsplash que se muestra en el fondo del body al hacer scroll -->
+  <section id="linea-tiempo">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Línea del Tiempo Histórica</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Orígenes, evolución y consolidación de la administración como disciplina esencial
+        para el manejo de recursos económicos
+      </p>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line" id="timelineLine"></div>
+
+        <!-- 1. Era Primitiva -->
+        <div class="timeline-item left" data-era="antiguedad" data-aos="fade-right"
+             data-bg="https://canalsenior.es/wp-content/uploads/2022/03/164796944656620220609-canal-senior-personas-mayores-arte-primeras-civilizaciones.jpg"
+             data-era-label="5000 a.C. · Era Primitiva">
+          <div class="timeline-dot era-antiguedad"></div>
+          <div class="timeline-card era-antiguedad">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#7c3a00"/><stop offset="100%" stop-color="#d97706"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g1)"/>
+                <polygon points="210,12 295,98 125,98" fill="rgba(255,220,100,.22)" stroke="rgba(255,220,100,.5)" stroke-width="1.5"/>
+                <polygon points="210,28 268,98 152,98" fill="rgba(255,220,100,.12)"/>
+                <circle cx="345" cy="26" r="20" fill="rgba(255,200,50,.28)" stroke="rgba(255,200,50,.5)" stroke-width="1"/>
+                <line x1="345" y1="2" x2="345" y2="0" stroke="rgba(255,200,50,.4)" stroke-width="1.5"/>
+                <line x1="362" y1="9" x2="366" y2="5" stroke="rgba(255,200,50,.4)" stroke-width="1.5"/>
+                <line x1="367" y1="26" x2="372" y2="26" stroke="rgba(255,200,50,.4)" stroke-width="1.5"/>
+                <rect x="28" y="22" width="58" height="70" rx="5" fill="rgba(200,160,80,.28)" stroke="rgba(255,220,100,.4)" stroke-width="1"/>
+                <line x1="36" y1="36" x2="78" y2="36" stroke="rgba(255,220,100,.35)" stroke-width="1"/>
+                <line x1="36" y1="47" x2="78" y2="47" stroke="rgba(255,220,100,.35)" stroke-width="1"/>
+                <line x1="36" y1="58" x2="66" y2="58" stroke="rgba(255,220,100,.35)" stroke-width="1"/>
+                <line x1="36" y1="69" x2="74" y2="69" stroke="rgba(255,220,100,.35)" stroke-width="1"/>
+                <line x1="36" y1="80" x2="62" y2="80" stroke="rgba(255,220,100,.35)" stroke-width="1"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(255,220,100,.65)" font-size="10" font-family="Georgia">5000 a.C. — Primeras Civilizaciones</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🏺</span>
+              <span class="timeline-periodo">5000 – 1700 a.C. · Era Primitiva</span>
+              <h3>Primeras Civilizaciones</h3>
+              <p>Los <strong>sumerios</strong> crearon los primeros registros escritos comerciales y gubernamentales. Los <strong>egipcios</strong> desarrollaron inventarios, burocracia y planeación de grandes obras. Los <strong>babilónicos</strong> regularon salarios y obligaciones con el Código de Hammurabi.</p>
+              <ul class="tl-tags">
+                <li>Actores: Sumerios, Egipcios, Babilónicos</li>
+                <li>Causa: necesidad de organizar recursos colectivos</li>
+                <li>Consecuencia: primeros sistemas de control económico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Antigüedad Clásica -->
+        <div class="timeline-item right" data-era="antiguedad" data-aos="fade-left"
+             data-bg="https://images.unsplash.com/photo-1555993539-1732b0258235?w=1600&q=80"
+             data-era-label="500 a.C. · Antigüedad Clásica">
+          <div class="timeline-dot era-antiguedad"></div>
+          <div class="timeline-card era-antiguedad">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#92400e"/><stop offset="100%" stop-color="#b45309"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g2)"/>
+                <rect x="78" y="18" width="13" height="78" rx="2" fill="rgba(255,220,150,.28)" stroke="rgba(255,220,150,.5)" stroke-width="1"/>
+                <rect x="98" y="18" width="13" height="78" rx="2" fill="rgba(255,220,150,.28)" stroke="rgba(255,220,150,.5)" stroke-width="1"/>
+                <rect x="118" y="18" width="13" height="78" rx="2" fill="rgba(255,220,150,.28)" stroke="rgba(255,220,150,.5)" stroke-width="1"/>
+                <rect x="73" y="12" width="68" height="9" rx="2" fill="rgba(255,220,150,.38)"/>
+                <rect x="70" y="94" width="74" height="7" rx="1" fill="rgba(255,220,150,.38)"/>
+                <text x="290" y="68" text-anchor="middle" fill="rgba(255,220,100,.35)" font-size="52" font-family="serif">🦅</text>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(255,220,100,.65)" font-size="10" font-family="Georgia">500 a.C. — Antigüedad Clásica</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🏛️</span>
+              <span class="timeline-periodo">500 a.C. – 500 d.C. · Antigüedad Clásica</span>
+              <h3>Griegos, Romanos y Chinos</h3>
+              <p>Los <strong>griegos</strong> aportaron la ética del trabajo y la universalidad de la administración. Los <strong>romanos</strong> construyeron una estructura organizada y autoritaria con funciones diferenciadas. Los <strong>chinos</strong> sentaron las bases del buen gobierno y la administración pública.</p>
+              <ul class="tl-tags">
+                <li>Actores: Sócrates, Platón, Confucio, Imperio Romano</li>
+                <li>Causa: expansión territorial y complejidad del Estado</li>
+                <li>Consecuencia: primeros principios de organización formal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Feudalismo e Iglesia -->
+        <div class="timeline-item left" data-era="edad-media" data-aos="fade-right"
+             data-bg="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzeHBPoQSLIMzPh7vQHwOKj3f5Z9pXjIfkK7cmMPOp8ItqZN5S7LYZ-UH0XeI3ZiQH0I3T_0-5XFSydRujPE1GekkPO9GA7lSY5SCicpfMckUkCxjmLIMr8_irRCrZSQZzjTX9mpJvtQn-/w1200-h630-p-k-no-nu/Munkacsy_Mihaly_Honfoglalas.jpg"
+             data-era-label="s. V–XV · Edad Media">
+          <div class="timeline-dot era-edad-media"></div>
+          <div class="timeline-card era-edad-media">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#3b0764"/><stop offset="100%" stop-color="#7c3aed"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g3)"/>
+                <rect x="58" y="48" width="84" height="58" fill="rgba(200,180,255,.18)" stroke="rgba(200,180,255,.4)" stroke-width="1"/>
+                <rect x="58" y="30" width="20" height="28" fill="rgba(200,180,255,.22)" stroke="rgba(200,180,255,.4)" stroke-width="1"/>
+                <rect x="122" y="30" width="20" height="28" fill="rgba(200,180,255,.22)" stroke="rgba(200,180,255,.4)" stroke-width="1"/>
+                <rect x="86" y="36" width="28" height="22" fill="rgba(200,180,255,.12)"/>
+                <rect x="58" y="24" width="9" height="9" fill="rgba(200,180,255,.28)"/>
+                <rect x="71" y="24" width="9" height="9" fill="rgba(200,180,255,.28)"/>
+                <rect x="122" y="24" width="9" height="9" fill="rgba(200,180,255,.28)"/>
+                <rect x="135" y="24" width="9" height="9" fill="rgba(200,180,255,.28)"/>
+                <rect x="293" y="18" width="7" height="54" fill="rgba(255,220,255,.32)"/>
+                <rect x="278" y="32" width="37" height="7" fill="rgba(255,220,255,.32)"/>
+                <circle cx="362" cy="24" r="15" fill="rgba(200,180,255,.18)" stroke="rgba(200,180,255,.4)" stroke-width="1"/>
+                <circle cx="370" cy="19" r="12" fill="url(#g3)"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(220,200,255,.65)" font-size="10" font-family="Georgia">s. V–XV — Edad Media</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🏰</span>
+              <span class="timeline-periodo">s. V – XV · Edad Media</span>
+              <h3>Feudalismo e Iglesia</h3>
+              <p>El <strong>feudalismo</strong> incorporó problemas de gobierno y negocios: los feudos delegaban actividades pero conservaban la autoridad. La <strong>Iglesia Católica</strong> ofreció un modelo de estructura jerarquizada y centralizada que influyó en la organización de recursos a gran escala.</p>
+              <ul class="tl-tags">
+                <li>Actores: señores feudales, gremios, Iglesia</li>
+                <li>Causa: descentralización del poder político</li>
+                <li>Consecuencia: aparición de gremios y delegación administrativa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Revolución Industrial -->
+        <div class="timeline-item right" data-era="modernidad" data-aos="fade-left"
+             data-bg="https://t3.ftcdn.net/jpg/08/53/81/62/360_F_853816275_DPO1Ad2NzcqmnTQ9JgH8mI0r630rYEdq.jpg"
+             data-era-label="s. XVIII–XIX · Revolución Industrial">
+          <div class="timeline-dot era-modernidad"></div>
+          <div class="timeline-card era-modernidad">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#1d4ed8"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g4)"/>
+                <rect x="48" y="54" width="124" height="58" fill="rgba(100,160,255,.18)" stroke="rgba(100,160,255,.4)" stroke-width="1"/>
+                <rect x="63" y="32" width="20" height="28" fill="rgba(100,160,255,.22)" stroke="rgba(100,160,255,.4)" stroke-width="1"/>
+                <rect x="98" y="20" width="20" height="40" fill="rgba(100,160,255,.22)" stroke="rgba(100,160,255,.4)" stroke-width="1"/>
+                <rect x="133" y="38" width="20" height="22" fill="rgba(100,160,255,.22)" stroke="rgba(100,160,255,.4)" stroke-width="1"/>
+                <circle cx="73" cy="24" r="8" fill="rgba(180,200,255,.13)"/>
+                <circle cx="80" cy="14" r="10" fill="rgba(180,200,255,.1)"/>
+                <circle cx="108" cy="12" r="9" fill="rgba(180,200,255,.13)"/>
+                <circle cx="116" cy="3" r="11" fill="rgba(180,200,255,.08)"/>
+                <circle cx="322" cy="58" r="30" fill="none" stroke="rgba(100,160,255,.32)" stroke-width="3" stroke-dasharray="9,4"/>
+                <circle cx="322" cy="58" r="18" fill="rgba(100,160,255,.13)" stroke="rgba(100,160,255,.38)" stroke-width="2"/>
+                <circle cx="322" cy="58" r="7" fill="rgba(100,160,255,.28)"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(150,200,255,.65)" font-size="10" font-family="Georgia">s. XVIII–XIX — Revolución Industrial</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🏭</span>
+              <span class="timeline-periodo">s. XVIII – XIX · Modernidad</span>
+              <h3>Revolución Industrial</h3>
+              <p>La <strong>industrialización</strong> trajo especialización del trabajo y producción en serie, pero también explotación de la mano de obra. Surgió la necesidad urgente de administrar recursos económicos a escala masiva: salarios, materias primas e inversión debían controlarse con rigor.</p>
+              <ul class="tl-tags">
+                <li>Actores: empresarios, obreros, ingenieros</li>
+                <li>Causa: mecanización y producción a gran escala</li>
+                <li>Consecuencia: nace la administración como disciplina formal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Administración Científica -->
+        <div class="timeline-item left" data-era="modernidad" data-aos="fade-right"
+             data-bg="https://media.licdn.com/dms/image/v2/D4D12AQHK_mKrXDqpPg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1714227929544?e=2147483647&v=beta&t=bu_ZnKLl7maPDxS2kbhUg8BYcPLaFnLInjA2hCY2ncA"
+             data-era-label="1900–1930 · Administración Científica">
+          <div class="timeline-dot era-modernidad"></div>
+          <div class="timeline-card era-modernidad">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0f2a4a"/><stop offset="100%" stop-color="#2563eb"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g5)"/>
+                <rect x="48" y="78" width="18" height="22" fill="rgba(100,180,255,.38)" rx="2"/>
+                <rect x="70" y="58" width="18" height="42" fill="rgba(100,180,255,.48)" rx="2"/>
+                <rect x="92" y="42" width="18" height="58" fill="rgba(100,180,255,.58)" rx="2"/>
+                <rect x="114" y="28" width="18" height="72" fill="rgba(100,180,255,.68)" rx="2"/>
+                <line x1="42" y1="100" x2="140" y2="100" stroke="rgba(150,200,255,.48)" stroke-width="1.5"/>
+                <polyline points="57,78 79,58 101,42 123,28" fill="none" stroke="rgba(255,220,100,.58)" stroke-width="2" stroke-dasharray="4,2"/>
+                <circle cx="292" cy="50" r="30" fill="none" stroke="rgba(150,200,255,.38)" stroke-width="2.5"/>
+                <circle cx="292" cy="50" r="20" fill="rgba(100,160,255,.08)" stroke="rgba(150,200,255,.28)" stroke-width="1"/>
+                <line x1="314" y1="72" x2="334" y2="92" stroke="rgba(150,200,255,.48)" stroke-width="3" stroke-linecap="round"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(150,200,255,.65)" font-size="10" font-family="Georgia">1900–1930 — Administración Científica</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🔬</span>
+              <span class="timeline-periodo">1900 – 1930 · Administración Científica</span>
+              <h3>La Administración se Vuelve Ciencia</h3>
+              <p>La <strong>administración científica</strong> surge como respuesta a la ineficiencia industrial. Se establecen métodos, estándares y principios para organizar el trabajo y controlar los recursos económicos con rigor. Esta etapa sienta las bases conceptuales que los grandes teóricos del siglo XX desarrollarían en profundidad.</p>
+              <ul class="tl-tags">
+                <li>Causa: ineficiencia en el uso de recursos humanos y económicos</li>
+                <li>Cambio estructural: del empirismo a los principios científicos</li>
+                <li>Consecuencia: nace la administración como disciplina académica formal</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Los Grandes Teóricos -->
+        <div class="timeline-item right" data-era="contemporaneo" data-aos="fade-left"
+             data-bg="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80"
+             data-era-label="1950–2000 · Consolidación Teórica">
+          <div class="timeline-dot era-contemporaneo"></div>
+          <div class="timeline-card era-contemporaneo">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#064e3b"/><stop offset="100%" stop-color="#059669"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g6)"/>
+                <rect x="38" y="64" width="74" height="13" rx="2" fill="rgba(100,255,180,.28)" stroke="rgba(100,255,180,.5)" stroke-width="1"/>
+                <rect x="42" y="51" width="66" height="13" rx="2" fill="rgba(100,255,180,.22)" stroke="rgba(100,255,180,.4)" stroke-width="1"/>
+                <rect x="46" y="38" width="58" height="13" rx="2" fill="rgba(100,255,180,.18)" stroke="rgba(100,255,180,.35)" stroke-width="1"/>
+                <rect x="50" y="25" width="50" height="13" rx="2" fill="rgba(100,255,180,.13)" stroke="rgba(100,255,180,.3)" stroke-width="1"/>
+                <circle cx="242" cy="36" r="9" fill="rgba(100,255,180,.32)" stroke="rgba(100,255,180,.6)" stroke-width="1.5"/>
+                <circle cx="292" cy="57" r="9" fill="rgba(100,255,180,.32)" stroke="rgba(100,255,180,.6)" stroke-width="1.5"/>
+                <circle cx="342" cy="32" r="9" fill="rgba(100,255,180,.32)" stroke="rgba(100,255,180,.6)" stroke-width="1.5"/>
+                <circle cx="372" cy="68" r="9" fill="rgba(100,255,180,.32)" stroke="rgba(100,255,180,.6)" stroke-width="1.5"/>
+                <circle cx="312" cy="84" r="9" fill="rgba(100,255,180,.32)" stroke="rgba(100,255,180,.6)" stroke-width="1.5"/>
+                <line x1="242" y1="36" x2="292" y2="57" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="292" y1="57" x2="342" y2="32" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="342" y1="32" x2="372" y2="68" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="372" y1="68" x2="312" y2="84" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="312" y1="84" x2="242" y2="36" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(100,255,180,.65)" font-size="10" font-family="Georgia">1950–2000 — Consolidación Teórica</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">📚</span>
+              <span class="timeline-periodo">1950 – 2000 · Consolidación Teórica</span>
+              <h3>Los Grandes Teóricos de la Administración</h3>
+              <p>Los pensadores que definieron la disciplina y cuyas ideas guían hoy el manejo de recursos económicos en las organizaciones:</p>
+              <div class="teoricos-grid">
+                <div class="teorico-item">
+                  <span class="teorico-nombre">Chiavenato</span>
+                  <span class="teorico-def">"Interpretar los objetivos y transformarlos en acción organizacional a través de planificar, organizar, dirigir y controlar."</span>
+                </div>
+                <div class="teorico-item">
+                  <span class="teorico-nombre">Stoner (1996)</span>
+                  <span class="teorico-def">"Proceso de planificación, organización, dirección y control del trabajo y los recursos para alcanzar las metas establecidas."</span>
+                </div>
+                <div class="teorico-item">
+                  <span class="teorico-nombre">George Terry</span>
+                  <span class="teorico-def">"Logro de objetivos por parte de personas que aportan sus mayores esfuerzos de acuerdo con acciones preestablecidas."</span>
+                </div>
+                <div class="teorico-item">
+                  <span class="teorico-nombre">James D. Mooney</span>
+                  <span class="teorico-def">"El arte o técnica de dirigir e inspirar a los demás, con base en un profundo conocimiento de la naturaleza humana."</span>
+                </div>
+                <div class="teorico-item">
+                  <span class="teorico-nombre">Koontz &amp; O'Donnell</span>
+                  <span class="teorico-def">"La dirección de un organismo social y su efectividad en alcanzar los objetivos, fundada en la habilidad de conducir a sus integrantes."</span>
+                </div>
+              </div>
+              <ul class="tl-tags">
+                <li>Causa: necesidad de sistematizar el conocimiento administrativo</li>
+                <li>Común a todos: objetivos, personas, proceso, recursos, organización</li>
+                <li>Consecuencia: fundamentos universales para gestionar recursos económicos</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Era Digital -->
+        <div class="timeline-item left" data-era="contemporaneo" data-aos="fade-right"
+             data-bg="https://imagenes2.eltiempo.com/files/image_1200_535/uploads/2020/01/10/5e192bd5ef364.jpeg"
+             data-era-label="2000–Presente · Era Digital">
+          <div class="timeline-dot era-contemporaneo"></div>
+          <div class="timeline-card era-contemporaneo">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#022c22"/><stop offset="100%" stop-color="#047857"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g7)"/>
+                <line x1="28" y1="58" x2="80" y2="58" stroke="rgba(100,255,180,.38)" stroke-width="1.5"/>
+                <line x1="80" y1="58" x2="80" y2="30" stroke="rgba(100,255,180,.38)" stroke-width="1.5"/>
+                <line x1="80" y1="30" x2="132" y2="30" stroke="rgba(100,255,180,.38)" stroke-width="1.5"/>
+                <line x1="132" y1="30" x2="132" y2="74" stroke="rgba(100,255,180,.38)" stroke-width="1.5"/>
+                <line x1="132" y1="74" x2="174" y2="74" stroke="rgba(100,255,180,.38)" stroke-width="1.5"/>
+                <circle cx="80" cy="58" r="5" fill="rgba(100,255,180,.58)"/>
+                <circle cx="80" cy="30" r="5" fill="rgba(100,255,180,.58)"/>
+                <circle cx="132" cy="30" r="5" fill="rgba(100,255,180,.58)"/>
+                <circle cx="132" cy="74" r="5" fill="rgba(100,255,180,.58)"/>
+                <rect x="157" y="42" width="44" height="34" rx="4" fill="rgba(100,255,180,.13)" stroke="rgba(100,255,180,.48)" stroke-width="1.5"/>
+                <line x1="162" y1="48" x2="196" y2="48" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="162" y1="56" x2="196" y2="56" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="162" y1="64" x2="196" y2="64" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <ellipse cx="312" cy="46" rx="48" ry="24" fill="rgba(100,255,180,.1)" stroke="rgba(100,255,180,.32)" stroke-width="1.5"/>
+                <ellipse cx="286" cy="54" rx="30" ry="18" fill="rgba(100,255,180,.08)" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <ellipse cx="342" cy="54" rx="30" ry="18" fill="rgba(100,255,180,.08)" stroke="rgba(100,255,180,.28)" stroke-width="1"/>
+                <line x1="302" y1="70" x2="302" y2="88" stroke="rgba(100,255,180,.38)" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="322" y1="70" x2="322" y2="88" stroke="rgba(100,255,180,.38)" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(100,255,180,.65)" font-size="10" font-family="Georgia">2000–Presente — Era Digital</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">💡</span>
+              <span class="timeline-periodo">2000 – Presente · Era Digital</span>
+              <h3>Tecnología: Administración Científica Indispensable</h3>
+              <p>La tecnología hace que la <strong>administración científica sea indispensable</strong> para la organización moderna. El contador del siglo XXI combina análisis de datos, sistemas ERP y visión estratégica para transformar números en decisiones. El arte de administrar recursos económicos alcanza su máxima expresión.</p>
+              <ul class="tl-tags">
+                <li>Actores: contadores, administradores, sistemas ERP, IA</li>
+                <li>Causa: digitalización de la economía global</li>
+                <li>Consecuencia: la contaduría como arte de transformar datos en valor</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin timeline-wrapper -->
+    </div>
+  </section>
+
+  <!-- ===== ANÁLISIS CRÍTICO ===== -->
+  <section id="analisis" class="section-dark">
+    <div class="container">
+      <h2 class="section-title light" data-aos="fade-up">Análisis Crítico</h2>
+      <p class="section-subtitle light" data-aos="fade-up" data-aos-delay="100">
+        Reflexiones sobre la evolución histórica de la contaduría y la administración
+      </p>
+
+      <div class="cards-grid">
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">🔄</div>
+          <h3>Cambios Estructurales</h3>
+          <p>La administración evolucionó desde la división de funciones sociales en las primeras civilizaciones hasta convertirse en una ciencia formal. Cada etapa —primitiva, feudal, industrial, científica y digital— transformó la manera en que las organizaciones gestionan sus recursos económicos, respondiendo siempre a las exigencias del entorno.</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">📅</div>
+          <h3>Periodizaciones</h3>
+          <p>Identificamos cuatro grandes períodos: <strong>Era Primitiva</strong> (registros empíricos y primeras organizaciones), <strong>Antigüedad Clásica</strong> (principios éticos y estructuras de gobierno), <strong>Edad Media</strong> (feudalismo e Iglesia como modelos organizacionales), <strong>Modernidad</strong> (industrialización y administración científica) y <strong>Era Contemporánea</strong> (consolidación teórica y tecnología).</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">🔗</div>
+          <h3>Relaciones entre Eventos</h3>
+          <p>Existe una cadena causal clara: la complejidad organizacional de las primeras civilizaciones exigió registros; el feudalismo generó gremios y delegación; la Revolución Industrial demandó control de costos; la administración científica respondió con principios formales; y teóricos como <strong>Chiavenato, Stoner, Terry, Mooney y Koontz</strong> los sistematizaron en fundamentos universales que hoy aplica la contaduría pública.</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon">💡</div>
+          <h3>Reflexión Final</h3>
+          <p>Como señala el ensayo: administrar recursos económicos con eficiencia y eficacia no acepta errores ni ensayos. La historia confirma que las organizaciones que dominaron el arte de gestionar sus recursos lograron estabilidad y crecimiento. Los teóricos coinciden en que administrar es, en esencia, <em>lograr objetivos a través de personas y recursos</em>: exactamente lo que hace la contaduría pública cada día.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIBLIOGRAFÍA ===== -->
+  <section id="bibliografia" class="section-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Bibliografía</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Referencias en normas APA 7.ª edición
+      </p>
+
+      <div class="biblio-lista" data-aos="fade-up" data-aos-delay="150">
+        <div class="biblio-item">
+          <span class="biblio-num">1</span>
+          <p>Chiavenato, I. (2006). <em>Introducción a la teoría general de la administración</em> (7.ª ed.). McGraw-Hill Interamericana.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">2</span>
+          <p>Stoner, J. A. F., Freeman, R. E., &amp; Gilbert, D. R. (1996). <em>Administración</em> (6.ª ed.). Prentice Hall Hispanoamericana.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">3</span>
+          <p>Terry, G. R., &amp; Franklin, S. G. (1986). <em>Principios de administración</em> (2.ª ed.). Compañía Editorial Continental.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">4</span>
+          <p>Mooney, J. D., &amp; Reiley, A. C. (1939). <em>The principles of organization</em>. Harper &amp; Brothers.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">5</span>
+          <p>Koontz, H., &amp; O'Donnell, C. (1990). <em>Administración</em> (9.ª ed.). McGraw-Hill. (Citado en: Institución Universitaria de Colombia, <em>Guía 1A: Teorías de Administración</em>, 2026.)</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">6</span>
+          <p>Institución Universitaria de Colombia. (2026). <em>Guía 1A: Orígenes, concepto y evolución de la teoría administrativa</em>. Fundamentos de Administración. Material de clase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">📊 El Arte de la Contaduría</div>
+      <p class="footer-text">
+        Heidy Andrea Morales Muñoz &amp; Karen Dayana Pérez Bernal &amp; Nicolás Esteban Salamanca Rivas &amp; Karen Dayana Vanegas Gutiérrez <br>
+        Fundamentos de Administración · Contaduría Pública<br>
+        Institución Universitaria de Colombia · 2026
+      </p>
+      <p class="footer-copy">Presentación académica interactiva · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="btn-top" aria-label="Volver al inicio" title="Volver al inicio">↑</button>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Script propio -->
+  <script src="script.js"></script>
+</body>
+</html>

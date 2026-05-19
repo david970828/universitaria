@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toma de Decisiones Financieras — Fundamentos de Administración</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS — Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== FONDO CINEMATOGRÁFICO ===== -->
+  <div id="scene-bg" aria-hidden="true"></div>
+  <div id="scene-overlay" aria-hidden="true"></div>
+
+  <!-- Indicador de etapa activa -->
+  <div id="era-indicator" class="era-indicator" aria-live="polite"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <span class="nav-logo">📈 Decisiones Financieras</span>
+      <ul class="nav-links">
+        <li><a href="#portada"      class="nav-link">Inicio</a></li>
+        <li><a href="#ensayo"       class="nav-link">Ensayo</a></li>
+        <li><a href="#mapa"         class="nav-link">Mapa Conceptual</a></li>
+        <li><a href="#linea-tiempo" class="nav-link">Línea del Tiempo</a></li>
+        <li><a href="#analisis"     class="nav-link">Análisis</a></li>
+        <li><a href="#bibliografia" class="nav-link">Bibliografía</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle" aria-label="Menú">&#9776;</button>
+    </div>
+  </nav>
+
+  <!-- ===== PORTADA / HERO ===== -->
+  <section id="portada">
+    <canvas id="particles"></canvas>
+    <div class="hero-content">
+      <p class="hero-curso">Fundamentos de Administración · Contaduría Pública</p>
+      <h1 class="hero-titulo">El Valor de la Toma de<br><em>Decisiones Financieras</em></h1>
+      <p class="hero-subtitulo">Como herramienta administrativa: el contador público en el corazón de la estrategia organizacional</p>
+
+      <div class="hero-autoras">
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Heidy Andrea Morales Muñoz</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Karen Dayana Pérez Bernal</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Karen Dayana Vanegas Gutiérrez</strong>
+          </div>
+        </div>
+        <div class="autora-card">
+          <span class="autora-icon">👩‍🎓</span>
+          <div>
+            <strong>Nicolás Esteban Salamanca Rivas</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span>🏛️ Institución Universitaria de Colombia</span>
+        <span>📅 20 de mayo de 2026</span>
+      </div>
+
+      <a href="#ensayo" class="hero-btn">Explorar presentación ↓</a>
+    </div>
+  </section>
+
+  <!-- ===== ENSAYO Y JUSTIFICACIÓN ===== -->
+  <section id="ensayo" class="section-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Ensayo y Justificación Temática</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        El contador público moderno trasciende el registro contable: es un estratega que integra
+        información financiera con decisiones organizacionales de alto impacto.
+      </p>
+
+      <div class="cards-grid">
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+          <div class="card-icon">🧭</div>
+          <h3>El Contador como Estratega</h3>
+          <p>El contador de hoy no solo lleva registros: <strong>integra estrategias decisivas</strong> que fomentan el crecimiento empresarial. Garantiza información financiera confiable que aporta a la toma de decisiones, demostrando un reflejo numérico y contable con resoluciones sumamente planificadas. La administración, apoyada en la contabilidad, da sentido y dirección a esa información.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="250">
+          <div class="card-icon">⚖️</div>
+          <h3>Ética como Garantía</h3>
+          <p>La ética es un valor indispensable para el contador y el administrador. Toda información entregada debe ser <strong>verídica y reflejar la realidad</strong> de la organización, respaldada por marcos normativos como las <em>NIIF</em>. La complicidad en prácticas engañosas fractura la confianza de inversionistas y acreedores, afectando el crecimiento económico de cualquier organización.</p>
+        </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="350">
+          <div class="card-icon">🤝</div>
+          <h3>Contar para Gestionar</h3>
+          <p>La contaduría genera información medible y estadística —balances, informes— que son herramientas para evaluar el desempeño organizacional. El <strong>administrador interpreta</strong> esa información para crear estrategias. Ambos roles, al trabajar en conjunto, enfocan a la organización en su desarrollo: la contaduría ofrece los datos y la administración los convierte en decisiones.</p>
+        </div>
+      </div>
+
+      <div class="justificacion" data-aos="fade-up" data-aos-delay="200">
+        <h3>📌 Justificación de la Temática</h3>
+        <p>Elegimos este tema porque la toma de decisiones financieras es el eje que conecta la contaduría con la administración estratégica. En un entorno empresarial cada vez más complejo y digitalizado, comprender cómo el contador público aporta valor más allá del registro contable —advirtiendo riesgos, evaluando viabilidad económica y garantizando información confiable— es fundamental para cualquier profesional que aspire a liderar organizaciones con criterio, ética y visión de futuro.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MAPA CONCEPTUAL INTERACTIVO ===== -->
+  <section id="mapa" class="section-dark">
+    <div class="container">
+      <h2 class="section-title light" data-aos="fade-up">Mapa Conceptual Interactivo</h2>
+      <p class="section-subtitle light" data-aos="fade-up" data-aos-delay="100">
+        Pasa el cursor sobre cada nodo para explorar su descripción
+      </p>
+
+      <div class="mapa-wrapper" data-aos="zoom-in" data-aos-delay="200">
+        <svg id="mapa-svg" viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mapa conceptual de Toma de Decisiones Financieras">
+
+          <!-- Líneas de conexión -->
+          <line class="mapa-linea" x1="400" y1="250" x2="400" y2="80"  stroke="#16a34a" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="650" y2="160" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="650" y2="360" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="150" y2="360" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,3"/>
+          <line class="mapa-linea" x1="400" y1="250" x2="150" y2="160" stroke="#16a34a" stroke-width="2" stroke-dasharray="6,3"/>
+
+          <!-- Nodo central -->
+          <g class="mapa-nodo" id="nodo-central" tabindex="0"
+             data-tooltip="Toma de Decisiones Financieras: núcleo donde el contador y el administrador convergen para garantizar información confiable, ética y estratégica que impulsa el crecimiento organizacional.">
+            <ellipse cx="400" cy="250" rx="105" ry="52" fill="#0f2a1a" stroke="#16a34a" stroke-width="3"/>
+            <text x="400" y="244" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Playfair Display">Toma de Decisiones</text>
+            <text x="400" y="262" text-anchor="middle" fill="#4ade80" font-size="12" font-weight="bold" font-family="Playfair Display">Financieras</text>
+          </g>
+
+          <!-- Nodo 1: Información Financiera (arriba) -->
+          <g class="mapa-nodo" id="nodo-1" tabindex="0"
+             data-tooltip="Información Financiera: balances, estados financieros e informes que reflejan la realidad económica de la organización. Base objetiva para cualquier decisión estratégica.">
+            <ellipse cx="400" cy="70" rx="92" ry="38" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+            <text x="400" y="64" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Información</text>
+            <text x="400" y="80" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Financiera</text>
+          </g>
+
+          <!-- Nodo 2: Ética Contable (derecha arriba) -->
+          <g class="mapa-nodo" id="nodo-2" tabindex="0"
+             data-tooltip="Ética Contable: garantía de que toda información sea verídica y respaldada por las NIIF. Sin ética, se fractura la confianza de inversionistas y acreedores.">
+            <ellipse cx="660" cy="155" rx="92" ry="38" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+            <text x="660" y="149" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Ética</text>
+            <text x="660" y="165" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Contable</text>
+          </g>
+
+          <!-- Nodo 3: Estrategia Organizacional (derecha abajo) -->
+          <g class="mapa-nodo" id="nodo-3" tabindex="0"
+             data-tooltip="Estrategia Organizacional: el administrador interpreta la información contable para crear estrategias que cambien el rumbo de la empresa y generen ventajas competitivas.">
+            <ellipse cx="660" cy="365" rx="92" ry="38" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+            <text x="660" y="359" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Estrategia</text>
+            <text x="660" y="375" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Organizacional</text>
+          </g>
+
+          <!-- Nodo 4: Tecnología y NIIF (izquierda abajo) -->
+          <g class="mapa-nodo" id="nodo-4" tabindex="0"
+             data-tooltip="Tecnología y NIIF: la revolución digital automatizó procesos contables, reduciendo errores y agilizando la información. Las NIIF son el marco normativo que garantiza su confiabilidad.">
+            <ellipse cx="140" cy="365" rx="92" ry="38" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+            <text x="140" y="359" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Tecnología</text>
+            <text x="140" y="375" text-anchor="middle" fill="white" font-size="12" font-family="Lato">&amp; NIIF</text>
+          </g>
+
+          <!-- Nodo 5: Control Financiero (izquierda arriba) -->
+          <g class="mapa-nodo" id="nodo-5" tabindex="0"
+             data-tooltip="Control Financiero: el contador advierte riesgos, evalúa viabilidad económica y fortalece el orden financiero. Permite que las organizaciones tengan ventaja significativa en el mercado.">
+            <ellipse cx="140" cy="155" rx="92" ry="38" fill="#14532d" stroke="#16a34a" stroke-width="2"/>
+            <text x="140" y="149" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Control</text>
+            <text x="140" y="165" text-anchor="middle" fill="white" font-size="12" font-family="Lato">Financiero</text>
+          </g>
+        </svg>
+        <div id="mapa-tooltip" class="mapa-tooltip" role="tooltip" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LÍNEA DEL TIEMPO ===== -->
+  <section id="linea-tiempo">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Línea del Tiempo</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Evolución del rol del contador público: del registro técnico a la estrategia organizacional
+      </p>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line" id="timelineLine"></div>
+
+        <!-- 1. El Contador como Pilar Organizacional -->
+        <div class="timeline-item left" data-era="origen" data-aos="fade-right"
+             data-bg="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1600&q=80"
+             data-era-label="El Contador como Pilar">
+          <div class="timeline-dot era-origen"></div>
+          <div class="timeline-card era-origen">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#052e16"/><stop offset="100%" stop-color="#16a34a"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g1)"/>
+                <!-- Columna / pilar -->
+                <rect x="80" y="20" width="22" height="88" rx="3" fill="rgba(74,222,128,.22)" stroke="rgba(74,222,128,.5)" stroke-width="1.5"/>
+                <rect x="72" y="14" width="38" height="10" rx="2" fill="rgba(74,222,128,.38)"/>
+                <rect x="72" y="106" width="38" height="8" rx="2" fill="rgba(74,222,128,.38)"/>
+                <!-- Gráfica de barras creciente -->
+                <rect x="160" y="88" width="18" height="20" rx="2" fill="rgba(74,222,128,.35)"/>
+                <rect x="184" y="70" width="18" height="38" rx="2" fill="rgba(74,222,128,.45)"/>
+                <rect x="208" y="50" width="18" height="58" rx="2" fill="rgba(74,222,128,.55)"/>
+                <rect x="232" y="30" width="18" height="78" rx="2" fill="rgba(74,222,128,.65)"/>
+                <line x1="154" y1="108" x2="258" y2="108" stroke="rgba(74,222,128,.45)" stroke-width="1.5"/>
+                <!-- Flecha hacia arriba -->
+                <line x1="310" y1="90" x2="310" y2="20" stroke="rgba(74,222,128,.5)" stroke-width="2"/>
+                <polygon points="310,14 302,28 318,28" fill="rgba(74,222,128,.6)"/>
+                <text x="210" y="115" text-anchor="middle" fill="rgba(74,222,128,.65)" font-size="10" font-family="Georgia">El Contador — Pilar Organizacional</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🏛️</span>
+              <span class="timeline-periodo">Rol Fundamental · Etapa 1</span>
+              <h3>El Contador como Pilar Organizacional</h3>
+              <p>El contador público se ha convertido en un <strong>pilar fundamental</strong> para el desarrollo organizacional y financiero. Ya no solo realiza registros contables: integra estrategias decisivas que fomentan el crecimiento empresarial, garantizando información financiera que aporta a la toma de decisiones con resoluciones sumamente planificadas.</p>
+              <ul class="tl-tags">
+                <li>Rol: estratega financiero y organizacional</li>
+                <li>Aporte: información confiable para decisiones</li>
+                <li>Resultado: ventajas competitivas para la empresa</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Impacto en Decisiones Organizacionales -->
+        <div class="timeline-item right" data-era="impacto" data-aos="fade-left"
+             data-bg="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&q=80"
+             data-era-label="Impacto en Decisiones">
+          <div class="timeline-dot era-impacto"></div>
+          <div class="timeline-card era-impacto">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e3a5f"/><stop offset="100%" stop-color="#0ea5e9"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g2)"/>
+                <!-- Red de decisiones -->
+                <circle cx="210" cy="55" r="22" fill="rgba(56,189,248,.18)" stroke="rgba(56,189,248,.5)" stroke-width="2"/>
+                <circle cx="120" cy="35" r="14" fill="rgba(56,189,248,.15)" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <circle cx="300" cy="35" r="14" fill="rgba(56,189,248,.15)" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <circle cx="120" cy="80" r="14" fill="rgba(56,189,248,.15)" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <circle cx="300" cy="80" r="14" fill="rgba(56,189,248,.15)" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <line x1="210" y1="55" x2="120" y2="35" stroke="rgba(56,189,248,.35)" stroke-width="1.5"/>
+                <line x1="210" y1="55" x2="300" y2="35" stroke="rgba(56,189,248,.35)" stroke-width="1.5"/>
+                <line x1="210" y1="55" x2="120" y2="80" stroke="rgba(56,189,248,.35)" stroke-width="1.5"/>
+                <line x1="210" y1="55" x2="300" y2="80" stroke="rgba(56,189,248,.35)" stroke-width="1.5"/>
+                <!-- Alerta de riesgo -->
+                <polygon points="360,25 345,55 375,55" fill="rgba(251,191,36,.25)" stroke="rgba(251,191,36,.5)" stroke-width="1.5"/>
+                <text x="360" y="48" text-anchor="middle" fill="rgba(251,191,36,.7)" font-size="14" font-weight="bold">!</text>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(56,189,248,.65)" font-size="10" font-family="Georgia">Impacto en Decisiones Organizacionales</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🎯</span>
+              <span class="timeline-periodo">Decisiones Estratégicas · Etapa 2</span>
+              <h3>Impacto en las Decisiones Organizacionales</h3>
+              <p>Las decisiones organizacionales no solo son tomadas por la gerencia: van <strong>de la mano con el contador</strong>. Este puede advertir riesgos financieros, evaluar si una decisión tiene sentido económicamente y fortalecer el control y el orden financiero. Las empresas que no integran al contador en decisiones estratégicas limitan su capacidad de desarrollo empresarial.</p>
+              <ul class="tl-tags">
+                <li>Función: advertir riesgos y evaluar viabilidad</li>
+                <li>Impacto: fortalece control y cumplimiento normativo</li>
+                <li>Consecuencia: mayor rango de capacidad organizacional</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Ética Contable -->
+        <div class="timeline-item left" data-era="etica" data-aos="fade-right"
+             data-bg="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1600&q=80"
+             data-era-label="Ética Contable">
+          <div class="timeline-dot era-etica"></div>
+          <div class="timeline-card era-etica">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#4a1942"/><stop offset="100%" stop-color="#a855f7"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g3)"/>
+                <!-- Balanza de justicia -->
+                <line x1="210" y1="18" x2="210" y2="90" stroke="rgba(216,180,254,.5)" stroke-width="2"/>
+                <line x1="150" y1="40" x2="270" y2="40" stroke="rgba(216,180,254,.5)" stroke-width="2"/>
+                <circle cx="150" cy="40" r="5" fill="rgba(216,180,254,.6)"/>
+                <circle cx="270" cy="40" r="5" fill="rgba(216,180,254,.6)"/>
+                <!-- Platillos -->
+                <path d="M 125,40 Q 150,65 175,40" fill="rgba(216,180,254,.18)" stroke="rgba(216,180,254,.45)" stroke-width="1.5"/>
+                <path d="M 245,40 Q 270,65 295,40" fill="rgba(216,180,254,.18)" stroke="rgba(216,180,254,.45)" stroke-width="1.5"/>
+                <!-- Base -->
+                <rect x="200" y="88" width="20" height="8" rx="2" fill="rgba(216,180,254,.4)"/>
+                <rect x="190" y="94" width="40" height="5" rx="2" fill="rgba(216,180,254,.35)"/>
+                <!-- Escudo NIIF -->
+                <path d="M 340,20 L 380,20 L 380,60 Q 380,80 360,88 Q 340,80 340,60 Z" fill="rgba(216,180,254,.12)" stroke="rgba(216,180,254,.4)" stroke-width="1.5"/>
+                <text x="360" y="52" text-anchor="middle" fill="rgba(216,180,254,.65)" font-size="11" font-family="Lato" font-weight="bold">NIIF</text>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(216,180,254,.65)" font-size="10" font-family="Georgia">Ética Contable — Garantía de Confianza</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">⚖️</span>
+              <span class="timeline-periodo">Ética y Normatividad · Etapa 3</span>
+              <h3>La Ética Contable como Garantía</h3>
+              <p>La ética es un valor indispensable para el contador y el administrador. Toda información debe ser <strong>verídica y reflejar la realidad</strong> de la organización, respaldada por las <em>NIIF</em>. La complicidad en falsificación, manipulación u omisión de información fractura la confianza de inversionistas y acreedores, generando graves consecuencias para la organización.</p>
+              <ul class="tl-tags">
+                <li>Marco normativo: NIIF como respaldo técnico</li>
+                <li>Riesgo: pérdida de confianza y credibilidad</li>
+                <li>Principio: transparencia y veracidad obligatorias</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Revolución Digital -->
+        <div class="timeline-item right" data-era="digital" data-aos="fade-left"
+             data-bg="https://images.unsplash.com/photo-1518770660439-4636190af475?w=1600&q=80"
+             data-era-label="Revolución Digital">
+          <div class="timeline-dot era-digital"></div>
+          <div class="timeline-card era-digital">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0c1a2e"/><stop offset="100%" stop-color="#0284c7"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g4)"/>
+                <!-- Circuito -->
+                <line x1="30" y1="60" x2="80" y2="60" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <line x1="80" y1="60" x2="80" y2="30" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <line x1="80" y1="30" x2="140" y2="30" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <line x1="140" y1="30" x2="140" y2="75" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <line x1="140" y1="75" x2="185" y2="75" stroke="rgba(56,189,248,.4)" stroke-width="1.5"/>
+                <circle cx="80" cy="60" r="5" fill="rgba(56,189,248,.6)"/>
+                <circle cx="80" cy="30" r="5" fill="rgba(56,189,248,.6)"/>
+                <circle cx="140" cy="30" r="5" fill="rgba(56,189,248,.6)"/>
+                <circle cx="140" cy="75" r="5" fill="rgba(56,189,248,.6)"/>
+                <!-- Chip -->
+                <rect x="185" y="45" width="44" height="36" rx="4" fill="rgba(56,189,248,.12)" stroke="rgba(56,189,248,.48)" stroke-width="1.5"/>
+                <line x1="190" y1="52" x2="224" y2="52" stroke="rgba(56,189,248,.28)" stroke-width="1"/>
+                <line x1="190" y1="60" x2="224" y2="60" stroke="rgba(56,189,248,.28)" stroke-width="1"/>
+                <line x1="190" y1="68" x2="224" y2="68" stroke="rgba(56,189,248,.28)" stroke-width="1"/>
+                <!-- Nube -->
+                <ellipse cx="320" cy="46" rx="50" ry="24" fill="rgba(56,189,248,.1)" stroke="rgba(56,189,248,.32)" stroke-width="1.5"/>
+                <ellipse cx="292" cy="55" rx="32" ry="18" fill="rgba(56,189,248,.08)" stroke="rgba(56,189,248,.28)" stroke-width="1"/>
+                <ellipse cx="348" cy="55" rx="32" ry="18" fill="rgba(56,189,248,.08)" stroke="rgba(56,189,248,.28)" stroke-width="1"/>
+                <line x1="308" y1="72" x2="308" y2="90" stroke="rgba(56,189,248,.38)" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <line x1="330" y1="72" x2="330" y2="90" stroke="rgba(56,189,248,.38)" stroke-width="1.5" stroke-dasharray="3,2"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(56,189,248,.65)" font-size="10" font-family="Georgia">Revolución Digital — Automatización Contable</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">💻</span>
+              <span class="timeline-periodo">Transformación Digital · Etapa 4</span>
+              <h3>Del Dominio Técnico a la Estrategia Digital</h3>
+              <p>La revolución digital automatizó procesos contables, permitiendo <strong>agilidad e innovación organizacional</strong>. Reduce errores en cálculos financieros y hace la información visible con mayor facilidad para las ramas gerenciales. Ahora no basta con conocer las NIIF: es indispensable dominar herramientas tecnológicas en constante evolución para aportar valor real a la empresa.</p>
+              <ul class="tl-tags">
+                <li>Cambio: de procesos manuales a sistemas automatizados</li>
+                <li>Beneficio: información en tiempo real para decisiones</li>
+                <li>Nuevo reto: competencias tecnológicas continuas</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Interpretación Financiera Estratégica -->
+        <div class="timeline-item left" data-era="estrategia" data-aos="fade-right"
+             data-bg="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80"
+             data-era-label="Interpretación Estratégica">
+          <div class="timeline-dot era-estrategia"></div>
+          <div class="timeline-card era-estrategia">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#431407"/><stop offset="100%" stop-color="#ea580c"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g5)"/>
+                <!-- Gráfica de línea ascendente -->
+                <polyline points="40,95 90,75 140,60 190,42 240,30 290,22" fill="none" stroke="rgba(251,146,60,.6)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="40"  cy="95" r="5" fill="rgba(251,146,60,.7)"/>
+                <circle cx="90"  cy="75" r="5" fill="rgba(251,146,60,.7)"/>
+                <circle cx="140" cy="60" r="5" fill="rgba(251,146,60,.7)"/>
+                <circle cx="190" cy="42" r="5" fill="rgba(251,146,60,.7)"/>
+                <circle cx="240" cy="30" r="5" fill="rgba(251,146,60,.7)"/>
+                <circle cx="290" cy="22" r="5" fill="rgba(251,146,60,.8)"/>
+                <line x1="34" y1="100" x2="300" y2="100" stroke="rgba(251,146,60,.4)" stroke-width="1.5"/>
+                <!-- Lupa de análisis -->
+                <circle cx="355" cy="50" r="28" fill="none" stroke="rgba(251,146,60,.38)" stroke-width="2.5"/>
+                <circle cx="355" cy="50" r="18" fill="rgba(251,146,60,.08)" stroke="rgba(251,146,60,.28)" stroke-width="1"/>
+                <line x1="376" y1="71" x2="395" y2="90" stroke="rgba(251,146,60,.48)" stroke-width="3" stroke-linecap="round"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(251,146,60,.65)" font-size="10" font-family="Georgia">Interpretación Financiera Estratégica</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">📊</span>
+              <span class="timeline-periodo">Interpretación Estratégica · Etapa 5</span>
+              <h3>Interpretación Financiera para Decidir</h3>
+              <p>El rol del contador hoy es claro: <strong>registrar, organizar y emplear</strong> la información financiera y administrativa conforme a las normas establecidas, aportando a las decisiones estratégicas de desarrollo empresarial. Sin un aporte confiable y decisivo del contador o el administrador, ninguna organización puede tener crecimiento y evolución progresiva.</p>
+              <ul class="tl-tags">
+                <li>Rol actual: más allá del registro, hacia la estrategia</li>
+                <li>Herramienta: balances e informes como base decisional</li>
+                <li>Impacto: crecimiento y evolución organizacional progresiva</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Contar para Gestionar -->
+        <div class="timeline-item right" data-era="gestion" data-aos="fade-left"
+             data-bg="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80"
+             data-era-label="Gestión Conjunta">
+          <div class="timeline-dot era-gestion"></div>
+          <div class="timeline-card era-gestion">
+            <div class="tl-img-bg">
+              <svg viewBox="0 0 420 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+                <defs>
+                  <linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#6366f1"/>
+                  </linearGradient>
+                </defs>
+                <rect width="420" height="120" fill="url(#g6)"/>
+                <!-- Dos círculos que se intersectan (Venn) -->
+                <circle cx="175" cy="58" r="42" fill="rgba(129,140,248,.15)" stroke="rgba(129,140,248,.45)" stroke-width="2"/>
+                <circle cx="245" cy="58" r="42" fill="rgba(129,140,248,.15)" stroke="rgba(129,140,248,.45)" stroke-width="2"/>
+                <!-- Intersección -->
+                <path d="M 210,20 Q 245,58 210,96 Q 175,58 210,20 Z" fill="rgba(129,140,248,.22)"/>
+                <!-- Etiquetas -->
+                <text x="155" y="55" text-anchor="middle" fill="rgba(199,210,254,.7)" font-size="9" font-family="Lato">Conta-</text>
+                <text x="155" y="67" text-anchor="middle" fill="rgba(199,210,254,.7)" font-size="9" font-family="Lato">duría</text>
+                <text x="265" y="55" text-anchor="middle" fill="rgba(199,210,254,.7)" font-size="9" font-family="Lato">Adminis-</text>
+                <text x="265" y="67" text-anchor="middle" fill="rgba(199,210,254,.7)" font-size="9" font-family="Lato">tración</text>
+                <!-- Flecha de crecimiento -->
+                <line x1="330" y1="90" x2="330" y2="22" stroke="rgba(129,140,248,.5)" stroke-width="2"/>
+                <polygon points="330,16 322,30 338,30" fill="rgba(129,140,248,.65)"/>
+                <text x="210" y="113" text-anchor="middle" fill="rgba(199,210,254,.65)" font-size="10" font-family="Georgia">Contar para Gestionar — Gestionar para Decidir</text>
+              </svg>
+            </div>
+            <div class="tl-content">
+              <span class="timeline-emoji">🤝</span>
+              <span class="timeline-periodo">Gestión Conjunta · Etapa 6</span>
+              <h3>Contar para Gestionar, Gestionar para Decidir</h3>
+              <p>La contaduría genera información medible y estadística; la administración la interpreta para crear estrategias. <strong>Ambas disciplinas trabajan en conjunto</strong>: la contaduría ofrece los datos y la administración los recibe para llegar a hechos verídicos y concretos. Juntas, enfocan a la organización en su desarrollo, complementando procesos, planeación y ética organizacional.</p>
+              <ul class="tl-tags">
+                <li>Sinergia: datos contables + interpretación administrativa</li>
+                <li>Base: ética como fundamento de la evolución integral</li>
+                <li>Resultado: desarrollo organizacional sostenible</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- fin timeline-wrapper -->
+    </div>
+  </section>
+
+  <!-- ===== ANÁLISIS CRÍTICO ===== -->
+  <section id="analisis" class="section-dark">
+    <div class="container">
+      <h2 class="section-title light" data-aos="fade-up">Análisis Crítico</h2>
+      <p class="section-subtitle light" data-aos="fade-up" data-aos-delay="100">
+        Reflexiones sobre el valor de las decisiones financieras en la gestión organizacional
+      </p>
+
+      <div class="cards-grid">
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon">🔄</div>
+          <h3>Evolución del Rol Contable</h3>
+          <p>El contador público ha transitado de ser un simple registrador a convertirse en un <strong>estratega organizacional</strong>. Esta evolución responde a la creciente complejidad del entorno empresarial, donde la información financiera ya no es un fin en sí mismo sino el insumo principal para la toma de decisiones que determinan el rumbo de las organizaciones.</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon">🔗</div>
+          <h3>Interdependencia Estratégica</h3>
+          <p>La relación entre contaduría y administración es de <strong>interdependencia necesaria</strong>: el contador produce información confiable y el administrador la convierte en decisiones estratégicas. Las organizaciones que separan estos roles o que no integran al contador en la gerencia limitan significativamente su capacidad de desarrollo y adaptación al mercado.</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon">⚡</div>
+          <h3>Desafíos de la Era Digital</h3>
+          <p>La automatización contable exige nuevas competencias: ya no basta con dominar las NIIF. El profesional moderno debe integrar <strong>herramientas tecnológicas, análisis de datos y visión estratégica</strong>. Quienes no se adapten a esta evolución quedarán rezagados en un mercado que demanda información en tiempo real y decisiones cada vez más ágiles y fundamentadas.</p>
+        </div>
+        <div class="card dark-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon">🌱</div>
+          <h3>Ética como Cimiento</h3>
+          <p>La toma de decisiones financieras solo tiene valor si está sustentada en la <strong>ética y la transparencia</strong>. La historia empresarial demuestra que las organizaciones que comprometen su integridad contable pierden la confianza del mercado de forma irreversible. La ética no es una restricción: es la base que hace sostenible cualquier estrategia de crecimiento organizacional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BIBLIOGRAFÍA ===== -->
+  <section id="bibliografia" class="section-light">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Bibliografía</h2>
+      <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+        Referencias en normas APA 7.ª edición
+      </p>
+
+      <div class="biblio-lista" data-aos="fade-up" data-aos-delay="150">
+        <div class="biblio-item">
+          <span class="biblio-num">1</span>
+          <p>Chiavenato, I. (2006). <em>Introducción a la teoría general de la administración</em> (7.ª ed.). McGraw-Hill Interamericana.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">2</span>
+          <p>International Accounting Standards Board. (2021). <em>Normas Internacionales de Información Financiera (NIIF)</em>. IFRS Foundation.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">3</span>
+          <p>Horngren, C. T., Sundem, G. L., &amp; Stratton, W. O. (2006). <em>Contabilidad administrativa</em> (13.ª ed.). Pearson Educación.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">4</span>
+          <p>Anthony, R. N., &amp; Govindarajan, V. (2008). <em>Sistemas de control de gestión</em> (12.ª ed.). McGraw-Hill.</p>
+        </div>
+        <div class="biblio-item">
+          <span class="biblio-num">5</span>
+          <p>Institución Universitaria de Colombia. (2026). <em>Guía 1A: Orígenes, concepto y evolución de la teoría administrativa</em>. Fundamentos de Administración. Material de clase.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer">
+    <div class="container footer-content">
+      <div class="footer-logo">📈 El Valor de la Toma de Decisiones Financieras</div>
+      <p class="footer-text">
+        Nicolás Esteban Salamanca Rivas &amp; Karen Dayana Vanegas Gutiérrez &amp; Heidy Andrea Morales Muñoz &amp; Karen Dayana Pérez Bernal <br>
+        Fundamentos de Administración · Contaduría Pública<br>
+        Institución Universitaria de Colombia · 2026
+      </p>
+      <p class="footer-copy">Presentación académica interactiva · Todos los derechos reservados</p>
+    </div>
+  </footer>
+
+  <!-- Botón volver arriba -->
+  <button id="btn-top" aria-label="Volver al inicio" title="Volver al inicio">↑</button>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Script propio -->
+  <script src="script.js"></script>
+</body>
+</html>
