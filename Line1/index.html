@@ -43,6 +43,7 @@
 
   <!-- ===== PORTADA / HERO ===== -->
   <section id="portada">
+    <img class="section-bg-img" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1920&q=85" alt="" aria-hidden="true" />
     <canvas id="particles"></canvas>
     <div class="hero-content">
       <p class="hero-curso">Fundamentos de Administración · Contaduría Pública</p>
@@ -99,6 +100,7 @@
 
   <!-- ===== MAPA CONCEPTUAL INTERACTIVO ===== -->
   <section id="mapa" class="section-dark">
+    <img class="section-bg-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&q=80" alt="" aria-hidden="true" />
     <div class="container">
       <h2 class="section-title light" data-aos="fade-up">Mapa Conceptual Interactivo</h2>
       <p class="section-subtitle light" data-aos="fade-up" data-aos-delay="100">
@@ -119,20 +121,22 @@
           </defs>
 
           <!-- Líneas de conexión con gradientes -->
-          <line class="mapa-linea" x1="410" y1="210" x2="410" y2="82"  stroke="url(#lg1)" stroke-width="2.5" stroke-dasharray="8,4"/>
-          <line class="mapa-linea" x1="410" y1="270" x2="680" y2="155" stroke="url(#lg2)" stroke-width="2.5" stroke-dasharray="8,4"/>
-          <line class="mapa-linea" x1="410" y1="310" x2="680" y2="400" stroke="url(#lg3)" stroke-width="2.5" stroke-dasharray="8,4"/>
-          <line class="mapa-linea" x1="410" y1="310" x2="140" y2="400" stroke="url(#lg4)" stroke-width="2.5" stroke-dasharray="8,4"/>
-          <line class="mapa-linea" x1="410" y1="270" x2="140" y2="155" stroke="url(#lg5)" stroke-width="2.5" stroke-dasharray="8,4"/>
-          <line class="mapa-linea" x1="410" y1="310" x2="410" y2="460" stroke="url(#lg1)" stroke-width="2.5" stroke-dasharray="8,4"/>
+          <line class="mapa-linea" x1="510" y1="245" x2="580" y2="155" stroke="url(#lg2)" stroke-width="2.5"/>
+          <line class="mapa-linea" x1="510" y1="285" x2="580" y2="395" stroke="url(#lg3)" stroke-width="2.5"/>
+          <line class="mapa-linea" x1="300" y1="285" x2="240" y2="395" stroke="url(#lg4)" stroke-width="2.5"/>
+          <line class="mapa-linea" x1="300" y1="245" x2="240" y2="155" stroke="url(#lg5)" stroke-width="2.5"/>
 
-          <!-- Nodo central — prominente con glow -->
+          <!-- Nodo central — prominente -->
           <g class="mapa-nodo" id="nodo-central" tabindex="0"
              data-tooltip="Toma de Decisiones Financieras en Colombia: desde los tributos coloniales hasta la digitalización actual, el contador y el administrador convergen para garantizar información confiable, ética y estratégica que impulsa el desarrollo organizacional del país.">
-            <ellipse cx="410" cy="265" rx="115" ry="58" fill="#052e16" stroke="#22c55e" stroke-width="3" filter="url(#glow)"/>
+            <ellipse cx="410" cy="265" rx="115" ry="58" fill="#052e16" stroke="#22c55e" stroke-width="3"/>
             <text x="410" y="255" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="bold" font-family="Playfair Display">📈 Decisiones</text>
             <text x="410" y="278" text-anchor="middle" fill="#4ade80" font-size="13" font-weight="bold" font-family="Playfair Display">Financieras en Colombia</text>
           </g>
+
+          <!-- Líneas verticales (dibujadas después del nodo central para que no queden tapadas) -->
+          <line class="mapa-linea" x1="410" y1="207" x2="410" y2="110" stroke="url(#lg1)" stroke-width="2.5"/>
+          <line class="mapa-linea" x1="410" y1="323" x2="410" y2="423" stroke="url(#lg1)" stroke-width="2.5"/>
 
           <!-- Nodo 1: Evolución Histórica (arriba) — azul cielo -->
           <g class="mapa-nodo" id="nodo-1" tabindex="0"
@@ -230,22 +234,18 @@
 
       <div class="cards-grid">
         <div class="card dark-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="card-icon">🏛️</div>
           <h3>De la Colonia a la República</h3>
           <p>Las decisiones financieras en Colombia nacieron bajo el control de la Corona española y la Iglesia. Con la independencia (1821) surgió la necesidad de un sistema financiero propio. La primera bancarrota de 1842 dejó una lección temprana: <strong>sin control y planificación, el crecimiento económico es insostenible</strong>. Este patrón se repetiría en cada crisis posterior.</p>
         </div>
         <div class="card dark-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="card-icon">🏦</div>
           <h3>Institucionalización Financiera</h3>
           <p>La creación del Banco de la República (1923), el control cambiario (1967) y el UPAC (1970) marcaron la <strong>institucionalización de las decisiones financieras</strong> en Colombia. El Estado asumió un rol regulador que transformó la forma en que empresas y familias gestionan sus recursos, pasando del empirismo a sistemas organizados de crédito, ahorro e inversión.</p>
         </div>
         <div class="card dark-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="card-icon">⚠️</div>
           <h3>Lecciones de las Crisis</h3>
           <p>La crisis de 1998–99 y la pandemia de 2020 demostraron que las decisiones financieras irresponsables tienen consecuencias devastadoras. El impuesto 4×1000, creado como medida de emergencia, sigue vigente en 2026. Estas crisis refuerzan la tesis del ensayo: <strong>la ética contable y la información confiable son la única garantía</strong> contra el colapso organizacional.</p>
         </div>
         <div class="card dark-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="card-icon">📱</div>
           <h3>El Contador del Siglo XXI</h3>
           <p>La adopción de NIIF (2009) y la digitalización actual exigen un contador que trascienda el registro. Billeteras virtuales, IA y control fiscal digital demandan <strong>nuevas competencias tecnológicas</strong>. Como plantea el ensayo, el contador y el administrador deben trabajar en sinergia: uno genera datos confiables y el otro los convierte en estrategias que impulsan el desarrollo organizacional colombiano.</p>
         </div>
